@@ -77,7 +77,7 @@ function init(){
     for(var i=0; i<cw; ++i)b.push(new Array(ch)), used.push(new Array(ch));
     for(var i=0; i<cw; ++i)for(var j=0; j<ch; ++j){
         b[i][j]=new Obj('empty', 0);
-        if(Math.random()<0.1&&(i!=Math.floor(cw/2)||j!=Math.floor(ch/2)))b[i][j].type='stone';
+        if(Math.random()<0.3&&(i!=Math.floor(cw/2)||j!=Math.floor(ch/2)))b[i][j].type='stone';
         else if(Math.random()<0.9)b[i][j].type='wood';
     }
     for(var i=0; i<cw; ++i)for(var j=0; j<ch; ++j)for(var k=0; k<2; ++k)if(i==player[k].x&&j==player[k].y)b[i][j].type='p'+String(k);
